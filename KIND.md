@@ -5,6 +5,8 @@ cat <<EOF | kind create cluster --name=ingress-cluster --config=-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
+- role: worker
+- role: worker
 - role: control-plane
   kubeadmConfigPatches:
   - |
